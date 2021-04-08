@@ -3,6 +3,8 @@
   "manifest_version": 2,
   "name": "BudgetKniss",
   "version": "1.0",
+  "author": "Yacine Benslimane",
+  "homepage_url": "https://github.com/yacine-bens/budgetkniss/tree/main",
   "icons": {
     "128": "icons/icon128.png",
     "64": "icons/icon64.png",
