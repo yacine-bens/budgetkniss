@@ -74,14 +74,14 @@ const getItemsContainer = async () => {
 
 const getPriceItems = async () => {
     const itemsContainer = await getItemsContainer();
-    const priceItemsXpathExp = './/div/h2/ancestor::div[1][count(div) = 2]/ancestor::div[3]';
+    const priceItemsXpathExp = './/div[child::h2 and count(div) = 2]/ancestor::div[3]';
     const priceItemsXpathResult = await waitForXPath(priceItemsXpathExp, itemsContainer, itemsContainer);
     return Array.from({ length: priceItemsXpathResult.snapshotLength }, (_, i) => priceItemsXpathResult.snapshotItem(i) as HTMLDivElement);
 }
 
 const getNoPriceItems = async () => {
     const itemsContainer = await getItemsContainer();
-    const noPriceItemsXpathExp = './/div/h2/ancestor::div[1][count(div) = 1]/ancestor::div[3]';
+    const noPriceItemsXpathExp = './/div[child::h2 and count(div) = 1]/ancestor::div[3]';
     const noPriceItemsXpathResult = await waitForXPath(noPriceItemsXpathExp, itemsContainer, itemsContainer);
     return Array.from({ length: noPriceItemsXpathResult.snapshotLength }, (_, i) => noPriceItemsXpathResult.snapshotItem(i) as HTMLDivElement);
 }

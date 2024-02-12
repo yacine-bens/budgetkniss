@@ -1,5 +1,5 @@
 "use strict";
-// Page actions are disabled by default and enabled on select tabs
+// Disable Page Action on all tabs except for ouedkniss store tabs
 chrome.action.disable();
 // Clear all rules to ensure only our expected rules are set
 chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
@@ -14,4 +14,6 @@ chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
     };
     chrome.declarativeContent.onPageChanged.addRules([rule]);
 });
+// on browser open, backgound script is not executed directly => page action is not disabled
+// add listener to window created to trigger the background script
 chrome.windows.onCreated.addListener(() => { console.log('window created'); });
