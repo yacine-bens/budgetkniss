@@ -30,7 +30,6 @@
 		"service_worker": "js/background.js"
 	},
 	"permissions": [
-		"tabs",
 		"storage",
 		"declarativeContent"
 	],
