@@ -1,3 +1,6 @@
+// Enable Page Action on ouedkniss
+chrome.runtime.sendMessage({ todo: 'showPageAction' });
+
 const DEFAULT_PREFS = {
     budget: 0,
     isHideOtherItems: false,

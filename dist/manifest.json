@@ -27,12 +27,11 @@
 		}
 	],
 	"background": {
-		"service_worker": "js/background.js"
+		"scripts": ["js/background.js"]
 	},
 	"permissions": [
 		"tabs",
-		"storage",
-		"declarativeContent"
+		"storage"
 	],
 	"host_permissions": [
 		"*://*.ouedkniss.com/*"
