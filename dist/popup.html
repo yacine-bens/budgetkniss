@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>BudgetKniss</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/checkbox.css">
+    </head>
+    <body>
+        <div id="intro" style="display: block; width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 9999999; background: rgb(32, 38, 46); opacity: 100%; transition: ease-in-out 1s;"></div>
+        <div>
+            <button type="button" id="lang-button">La langue</button>
+        </div> 
+        <div id="navbar">
+            <button type="button" id="fr-btn">Français</button> <br><br>
+            <button type="button" id="en-btn">English</button> <br><br>
+            <button type="button" id="ar-btn">العربية</button>
+        </div>
+        <div id="flex-container">
+            <br>
+            <div class="flex-item" id="image">
+                <img src="images/Logo.png" alt="Logo" title="BudgetKniss">
+            </div>
+			<div class="flex-item">
+				<input id="budget" type="number" min="0" placeholder="Entrer votre budget"> <span id="invalid-budget"> &nbsp;!</span>
+			</div>
+            <div class="flex-item" id="unit-div">
+                <label> 
+                    <span class="fr">Unité : &nbsp;</span> 
+                    <span class="en">Unit : &nbsp;</span>
+                    <select id="unit">
+                        <option value="da">Dinar</option>
+                        <option value="mc">Million Centime</option>
+                    </select>
+                    <span class="ar">&nbsp; : الوحدة </span>
+                </label>
+            </div>
+            <div class="flex-item">
+                <label class="b-contain">
+                    <span class="fr">Cacher les autres articles </span>
+                    <span class="en">Hide other items </span>
+                    <input type="checkbox" id="hide-other-items">
+                    <div class="b-input"></div>
+                    <span class="ar"> إخفاء العناصر الأخرى  </span>
+                </label>
+            </div>
+            <div class="flex-item">
+                <label class="b-contain">
+                    <span class="fr">Cacher les éléments sans prix </span>
+                    <span class="en">Hide items without a price </span>
+                    <input type="checkbox" id="hide-no-price">
+                    <div class="b-input"></div>
+                    <span class="ar"> إخفاء العناصر بلا ثمن  </span>
+                </label>
+            </div>
+            <div id="color-picker-div">
+                <span class="fr"> Couleur de prix : </span>
+                <span class="en"> Price color : </span>
+                <input id="color-picker" value="#FFFF00" data-jscolor="{}">
+                <span class="ar"> : لون الثمن </span>
+            </div>
+            <div class="flex-item" id="budget-text-line">
+                <span class="fr">Budget : </span>
+                <span class="en">Budget : </span> 
+                <span class="ar">الميزانية : </span>
+                <span id="budget-text">
+                    <span class="fr">Pas défini</span>
+                    <span class="en">Undefined</span>
+                    <span class="ar">غير معين</span>
+                </span>
+            </div>
+            <div class="flex-item" id="buttons">
+                <a href="#" id="apply-btn" class="button" style="background-color:#2979FF">
+                    <span class="fr">Appliquer</span>
+                    <span class="en">Apply</span>
+                    <span class="ar">تطبيق</span>
+                </a>
+                <a href="#" id="reset-btn" class="button" style="background-color:#CCCCCC; color:#000000">
+                    <span class="fr">Réinitialiser</span>
+                    <span class="en">Reset</span>
+                    <span class="ar">إعادة تعيين</span>
+                </a>
+            </div>
+        </div>
+        <script src="./js/popup/popup.js"></script>
+        <script src="./js/popup/jscolor.min.js"></script>
+    </body>
+</html>

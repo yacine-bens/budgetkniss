@@ -1,0 +1,20 @@
+{
+  "name": "budgetkniss",
+  "version": "1.0.0",
+  "description": "BudgetKniss is a browser extension that works with stores set-up in OuedKniss website. It shows products based on a budget.",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "ouedkniss",
+    "budget",
+    "store",
+    "dz"
+  ],
+  "author": "https://github.com/yacine-bens",
+  "homepage": "https://github.com/yacine-bens/budgetkniss",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chrome": "^0.0.260"
+  }
+}
